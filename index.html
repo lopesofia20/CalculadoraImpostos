@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Economia com ISS Fixo</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>Calculadora de Economia com ISS Fixo</h1>
+
+    <div class="form-group">
+      <label for="faturamento">Faturamento Trimestral (R$):</label>
+      <input type="number" id="faturamento" placeholder="Ex: 300000" />
+    </div>
+
+    <div class="form-group">
+      <label for="medicos">Número de Médicos na Sociedade:</label>
+      <input type="number" id="medicos" value="1" min="1" />
+    </div>
+
+    <div class="form-group">
+      <button onclick="calcularEconomia()">Calcular Economia</button>
+    </div>
+
+    <div class="result">
+      <h3>Resultado:</h3>
+      <p><strong>ISS no Regime Percentual(2% sobre a receita):</strong> R$ <span id="issPercentual"></span></p>
+      <p><strong>ISS no Regime Fixo:</strong> R$ <span id="issFixo"></span></p>
+      <p><strong>Economia Trimestral:</strong> R$ <span id="Trimestral"></span></p>
+      <p><strong>Economia Percentual:</strong> <span id="Percentual"></span> %</p>
+      <p><strong>Economia Estimada para 5 anos:</strong> R$ <span id="economiaCinco"></span></p>
+    </div>
+  </div>
+
+  <script src="calc.js"></script>
+</body>
+</html>
